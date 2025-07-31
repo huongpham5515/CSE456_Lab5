@@ -20,7 +20,6 @@ public class Main {
 
         CustomerService cs = appContext.getBean(CustomerService.class);
         InvoiceService is = appContext.getBean(InvoiceService.class);
-        ProductService ps = appContext.getBean(ProductService.class);
 
         Customer cus = new Customer("John Doe", "john.doe@example.com", "09997612", "New York");
         cs.createCustomer(cus);
@@ -36,6 +35,6 @@ public class Main {
 
         Invoice inv = new Invoice(cus, prods);
         is.createInvoice(inv, "InvoiceProduct", LocalDate.now());
-
+        is.removeInvoice(inv);
     }
 }

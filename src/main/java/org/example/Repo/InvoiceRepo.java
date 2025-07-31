@@ -13,4 +13,13 @@ public class InvoiceRepo {
         em.getTransaction().commit();;
         em.close();
     }
+
+    public static void removeInvoice(int id){
+        EntityManager em = javaUtil.getEntity();
+        em.getTransaction().begin();
+        em.remove(em.find(Invoice.class, id));
+        em.getTransaction().commit();
+        em.close();
+    }
 }
+

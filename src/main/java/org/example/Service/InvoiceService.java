@@ -25,5 +25,7 @@ public class InvoiceService {
         String filename = "Invoice_" + pdfName + "_" + date + ".pdf";
         pdf.generatePdf(filename);
     }
-
+    public void removeInvoice(Invoice inv){
+        InvoiceRepo.removeInvoice(inv.getInvoiceId());
+    }
 }

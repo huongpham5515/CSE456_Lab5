@@ -35,6 +35,6 @@ public class Main {
 
         Invoice inv = new Invoice(cus, prods);
         is.createInvoice(inv, "InvoiceProduct", LocalDate.now());
-        is.removeInvoice(inv);
+//        is.removeInvoice(inv);
     }
 }
